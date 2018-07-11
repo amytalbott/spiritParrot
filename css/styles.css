@@ -1,0 +1,64 @@
+
+
+body {
+  background-color: #d64161;
+}
+
+.jumbotron {
+  background-color: #eca1a6;
+  margin: 50px;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h2 {
+  font-family: 'PT Sans Caption', sans-serif;
+  padding-top: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+
+}
+
+.grid-item {
+  background-color: #96ceb4;
+
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  background-color: #588c7e;
+  outline: 4px solid #96ceb4;
+
+}
+
+button h3 {
+  color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2em;
+}
+
+.hovered {
+  background-color: purple;
+}
+
+.show {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.show img {
+  height: 75px;
+  width: 75px;
+}
+
+.show p {
+  font-family: 'PT Sans Caption', sans-serif;
+}

@@ -17,10 +17,7 @@ $('.grid-item').on('click', 'button', function(){
   $(event.target).hide();
   // fade in the parrot, show it, then fade it out
   $(event.target).next().fadeIn(2000).delay(2000).fadeOut(2000);
-
-  // then make the button reappear
-
-
+  // then make the button reappear???
 });
 
 

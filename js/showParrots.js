@@ -12,14 +12,17 @@ $('button').hover(function() {
 });
 
 // When the button is pressed
-$('.grid-item').on('click', function(){
-  // console.log(event.target);
+$('.grid-item').on('click', 'button', function(){
   // hide the button
   $(event.target).hide();
   // fade in the parrot, show it, then fade it out
   $(event.target).next().fadeIn(2000).delay(2000).fadeOut(2000);
+
   // then make the button reappear
+
+
 });
+
 
 // This is an old version of the code, where every grid item and button is targeted specifically
 // This worked, but the same code was repeated over and over again
@@ -29,7 +32,7 @@ $('.grid-item').on('click', function(){
 // // $('.showJanuary').hide();
 // // When the button is pressed
 // // $('.januaryButton').on('click', function(){
-//   // show the parrot 
+//   // show the parrot
 // // $('.showJanuary').show();
 //   // and hide the button
 // // $('.januaryButton').hide();

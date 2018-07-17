@@ -17,12 +17,21 @@ $('.grid-item').on('click', 'button', function (event) {
 
   btn.hide();
 
-  panel.fadeIn(2000, function () {
-    panel.fadeOut(2000, function () {
-      btn.show();
-      });
-    });
-  });
+  panel.fadeIn(2000)
+   .delay(2000)
+   .fadeOut(2000, function () {
+     btn.show();
+   });
+ }); 
+
+  // panel.fadeIn(2000, function () {
+  //   panel.fadeOut(2000, function () {
+  //     btn.show();
+  //     });
+  //   });
+  // });
+
+
 
   // This is an old version of the code, where the button did not reappear at the end,
   // and sometimes you had to click twice to get the parrot to appear

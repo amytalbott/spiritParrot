@@ -11,14 +11,31 @@ $('button').hover(function() {
     $(this).toggleClass("hovered");
 });
 
-// When the button is pressed
-$('.grid-item').on('click', 'button', function(){
-  // hide the button
-  $(event.target).hide();
-  // fade in the parrot, show it, then fade it out
-  $(event.target).next().fadeIn(2000).delay(2000).fadeOut(2000);
-  // then make the button reappear???
-});
+$('.grid-item').on('click', 'button', function (event) {
+  var btn = $(event.currentTarget),
+      panel = btn.next();
+
+  btn.hide();
+
+  panel.fadeIn(2000, function () {
+    panel.fadeOut(2000, function () {
+      btn.show();
+      });
+    });
+  });
+
+  // This is an old version of the code, where the button did not reappear at the end,
+  // and sometimes you had to click twice to get the parrot to appear
+
+  // // When the button is pressed
+  // $('.grid-item').on('click', function(event){
+  //   // hide the button
+  //   $(event.target).hide();
+  //   // fade in the parrot, show it, then fade it out
+  //   $(event.target).next().fadeIn(2000).delay(2000).fadeOut(2000);
+  //   // then make the button reappear???
+  //   setTimeout(function(){$(event.target).show();}, 9000);
+  // });
 
 
 // This is an old version of the code, where every grid item and button is targeted specifically
